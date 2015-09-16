@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Eloquente Javascript</title>
+  <script type="text/javascript">
+
+
+  	/* Palavras chaves reservadas
+  	break case catch continue debugger default delete do else false finally for function if implements in instanceof interface let new null package private protected public return static switch throw true try typeof var void while with yield this
+  	*/
+
+  	// função  alert('algum texto')
+
+  	// função console.log('');
+  	/* 
+
+  	Concatenando com + ou vírgula
+  	var x = 30;
+  	console.log('O valor é ',x);
+  		*/
+
+  	
+  	//console.log(Math.max(2, 4, 1, 9));
+  	//console.log(Math.min(2, 4) + 100);
+
+
+  	//console.log(confirm('Jean Wyllys é gay ?'))
+
+  	//função prompt('Digite abaixo o texto','Meu texto...')  OBS: retorna o valor digitado
+
+  	// funções de conversão de tipos: String(), Boolean(), Number()
+
+  	// função isNaN() retorna true quanto a variável passada for NaN( not a number)
+  	/*var theNumber = Number(prompt("Digite um número", ""));
+	if (!isNaN(theNumber))
+  alert("Your number is the square root of " +
+        theNumber * theNumber);
+			*/
+
+   //while
+	/*var num=0;
+	while (num <= 12){
+		console.log(num);
+
+		num = num +2;
+	}*/
+	
+	//do
+	/*
+	do {
+ 		 var name = prompt("Who are you?");
+	} while (!name);
+	console.log(name); */
+
+	//for
+	/*
+	for (var current = 20; ; current++) {
+  		if (current % 7 == 0)
+   			 break;
+	}
+	console.log(current);
+	*/
+	//exercício 1
+	/*var caracter ='#'
+	for (var i = 0; i < 7; i++) {
+		console.log(caracter);
+		caracter +='#';
+	}*/
+
+	//exercício 2
+	/*
+	for (var i = 1; i <= 100; i++) {
+		var saida ='';
+		if (i % 3 ==0)
+			saida +='Fizz';
+
+		if(i % 5 == 0)
+		   saida +='Buzz';
+
+		console.log(saida || i);
+	}
+	*/
+
+	//exercício 3
+	var resultado ='';
+
+	for (var j = 0; j <= 7; j ++) {
+
+		for (var i = 0; i <=7; i++){
+			if( (i + j) % 2 ==0)
+				resultado +=' ';
+			else	
+				resultado +='#';
+		}		
+		resultado+='\n';
+	}
+	console.log(resultado);
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

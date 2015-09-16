@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Eloquente Javascript </title>
+  <script type="text/javascript">
+
+  //definição de função--------------------
+  /*var raiz = function(x){
+  	return x * x;
+  }	
+  console.log(raiz(prompt('Digite um número '))); */
+
+  //
+  /*var exponen = function(base, expoente){
+  	var resultado =1;
+  	for(var conta = 0; conta < expoente; conta++){
+  		resultado *=base;
+
+	}
+  	return resultado;
+  }
+  console.log(exponen(2, 10));  OBS.: return sem valor, retorna undefined */
+
+
+// parâmetro e escopo-------------------- 
+ /* var x = "outside";
+
+  var f1 = function() {
+	  var x = "inside f1";
+  };
+	f1();
+	console.log(x);
+	// → outside
+
+	var f2 = function() {
+	  x = "inside f2";
+	};
+	f2();
+	console.log(x); */
+
+// escopo aninhado--------------------
+/*var paisagem = function(){
+	var result = "";
+  var flat = function(size) {
+    for (var count = 0; count < size; count++)
+      result += "_";
+  };
+  var mountain = function(size) {
+    result += "/";
+    for (var count = 0; count < size; count++)
+      result += "'";
+    result += "\\";
+  };
+
+  flat(3);
+  mountain(4);
+  flat(6);
+  mountain(1);
+  flat(1);
+  return result;
+};
+console.log(paisagem());*/
+
+// notação por definição--------------------
+/*function raiz(x){
+	return x * x;
+}
+console.log(raiz(10));
+*/
+
+//OBS se você não passar o argumento na função, a variável ficará como undefined--------------------
+/*function my(x){
+	console.log(x);	
+};
+ my(); */
+
+ //Closure--------------------
+ /*function multiplier(factor) {
+  return function(number) {
+    return number * factor;
+  };
+}
+
+var twice = multiplier(2);  // OBS: nesse momento ela esta retornando a function(number) para twice. A variável factor está preenchida com 2
+console.log(twice(5)); */
+
+//Recursão---------------------
+/*function power(base, exponent) {
+  if (exponent == 0)
+    return 1;
+  else
+    return base * power(base, exponent - 1);
+}
+
+console.log(power(2, 3)); */
+
+//Função e efeitos colaterais - definição de função pura:
+/*Uma função "pura" é um tipo específico de função que produz valores
+ e que não gera efeitos colaterais, como também não depende de efeitos colaterais 
+ de outros códigos — por exemplo, ela não utiliza variáveis globais que podem ser 
+ alteradas por outros códigos. */
+
+//Exercícios
+//Mínimo
+/*var min = function(n1,n2){
+    if (n1 > n2)
+      return n2;
+    else if ( n1 < n2)
+      return n1;
+
+    return n1;
+    
+}
+console.log(min( 1, 1)); */
+
+//Recursão
+/*function isEven(n){
+  if (n < 0)
+    n = - n;
+
+  if (n == 0)
+    return true;
+  else if(n == 1)
+    return false;
+  else
+    return isEven(n-2);
+}
+
+console.log(isEven(50));
+console.log(isEven(75));
+console.log(isEven(-101)); */
+
+//Contando feijão
+function countBs(palavra){
+  return countChar(palavra,'B');
+}
+
+function countChar(palavra, caracter){
+  var conta =0;
+  for (var i = 0; i <= palavra.length - 1; i++) {
+        if (palavra.charAt(i) == caracter)
+            conta++;
+  };
+  return conta; 
+}
+console.log(countBs('BBC'));
+console.log(countChar('kakkerlak','k'));
+  </script>
+
+</head>
+<body>
+
+</body>
+</html>

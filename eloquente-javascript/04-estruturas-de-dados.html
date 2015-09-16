@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Eloquente Javascript</title>
+  <script type="text/javascript">
+
+  //array no Javascript-------------------- 
+ /* var listOfNumbers = [2, 3, 5, 7, 11];
+  console.log(listOfNumbers[1]);
+  console.log(listOfNumbers[1 - 1]); */
+ 
+ //OBS null e undefined não têm propriedades
+ //null.length;
+ // → TypeError: Cannot read property 'length' of null
+
+/*var mys= 'Tássyo';
+console.log(mys[1]);*/
+
+//Métodos-------------------- 
+/*var mack = [];
+mack.push("Mack");
+mack.push("the", "Knife"); // adiciona itens ao array
+console.log(mack);
+// → ["Mack", "the", "Knife"]
+console.log(mack.join(" ")); // contatena os elementos
+// → Mack the Knife
+console.log(mack.pop()); // o ultimo item que entrou no array(FIFO - pilha)
+// → Knife
+console.log(mack);
+// → ["Mack", "the"]
+//console.log(mack[1]);
+console.log(mack.pop()); */
+
+//Objetos-------------------- 
+/*var dia1 = {
+	esquilo: false,
+	eventos: ['trabalhar','roer árvore', 'pizza', 'correr', "televisão"],
+};
+//console.log(dia1.eventos.join(' '));
+
+var descriptions = {
+  work: "Went to work",
+  "touched tree": "Touched a tree Teste"
+};
+console.log(descriptions); */
+
+/*var um_objeto ={ left:1 , right:2};
+console.log(um_objeto.left);
+
+delete um_objeto.left; // removendo a propriedade do objeto
+console.log(um_objeto.left); // propriedade undefined
+
+console.log("left" in um_objeto); //o operador in verifica se o nome passado entre aspas
+console.log("right" in um_objeto);// é uma propriedade do objeto, retornando um booleano */
+
+/*var jornal = [{eventos: ['trabalhar','roer árvore', 'pizza', 'correr', "televisão"],
+			    esquilo: false}, 
+			   {eventos: ['trabalhar','sorvete','colher flores', 'lasagna','roer árvores' ,'limpar dentes'],
+				esquilo: false},
+];										//OBS: array de objetos  --------------------------------------Muito IMPORTANTE o array de objetos
+console.log(jornal[0].eventos[2]);  */
+
+//Mutabilidade-------------------- IMPORTANTE 
+/*var object1 = {value: 10};
+var object2 = object1;
+var object3 = {value: 10};
+
+console.log(object1 == object2);
+// → true
+console.log(object1 == object3);
+// → false
+
+object1.value = 15;           //OBS: quando é setado o valor do objeto1 é alterado também o valor do objeto2
+console.log(object2.value);
+// → 15
+console.log(object3.value);
+// → 10 */
+
+// Correlação em 
+//Raiz quadrada em javascript: Math.sqrt
+//var journal ='JOURNAL';
+//console.log(journal.indexOf('O')); // retorna o índice onde o valor foi encontrado. Se não o encontrar retorna  -1
+
+//Objetos como mapas-------------------- 
+/*var mapa ={};
+function armazenaPhi(evento, phi){
+	mapa[evento] =phi;
+}
+
+armazenaPhi('pizza',0.059);
+armazenaPhi('roer árvore', - 0.881);
+console.log(mapa['roer árvore'])
+
+for(var evento in mapa)
+      console.log('Esse é o evento '+ evento+' ; e esse é o valor '
+        +mapa[evento]); */
+
+//Further arrayology--------------------  
+/*var meuarray = [];
+function lembrar(tarefa){
+  meuarray.push(tarefa);
+};
+
+function novo(){
+  meuarray.shift();
+};
+
+lembrar('comer');
+lembrar('beber');
+lembrar('escovar os dentes');
+lembrar('dançar');          // OBS
+//novo();
+
+lembrar('estudar');
+meuarray.shift();
+//novo();
+
+console.log(meuarray.length);
+
+for(var tar = 0; tar <= meuarray.length -1; tar++){
+  console.log('Ordem: '+tar+' - tarefa: '+meuarray[tar]+ '\n');
+}
+
+console.log('\n');
+var arrayfifo =[];
+arrayfifo.unshift('block');
+arrayfifo.unshift('strock');
+arrayfifo.unshift('regarder');
+arrayfifo.unshift('voyager');
+arrayfifo.shift();
+
+for(var tar = 0; tar <= arrayfifo.length -1; tar++){
+  console.log('Ordem: '+tar+' - tarefa: '+arrayfifo[tar]+ '\n');
+}
+//OBS: temos um array [0] [1] [2] [3] [4] [5] [6]
+        //shift/unshift /\           pop/push /\
+
+        // FIFO  = push + shift
+        //LIFO = unshift +  shift                MUITO IMPORTANTE
+
+console.log([1, 2, 3, 2, 1].indexOf(2));
+// → 1
+console.log([1, 2, 3, 2, 1].lastIndexOf(2));
+// → 3
+*/
+//array.slice
+//var array = ['a','b','c','d','e','f'];
+//console.log(array.slice(0,2));     //  O índice de início é inclusivo e o de parada é exclusivo.
+//console.log(array.slice(2));  //Trás todos a partir do c
+
+//concat + slice
+/*var marray = ['a','b','c','d','e','f'];
+
+function remove(array, indice){
+  return array.slice(0,indice).concat(array.slice(indice +1));
+};
+console.log(remove(marray,3)); 
+console.log(marray);*/
+
+//Strings e suas propriedades-------------------- 
+/*console.log("coconuts".slice(4, 7));
+console.log("coconut".indexOf("u"));
+console.log("one two three".indexOf("ee"));
+
+var string = "abc";
+console.log(string.length);
+// → 3
+console.log(string.charAt(0));
+// → a
+console.log(string[1]);
+// → b*/
+
+//O Objeto Arguments-------------------- 
+/*function dizer(){
+  console.log('Essa função possui '+arguments.length+' argumentos !!');
+  console.log('Argumento [1] é '+arguments[1]);
+}
+dizer('Amen', 'Pai', 'filho');*/
+
+//console.log(Math.random());
+//console.log(Math.random());
+//console.log(Math.floor(Math.random()* 100)); // floor arredonda para o número para o menor valor inteiro próximo
+// multiplicar o Random por 100 significa que ele irá retornar um número que seja maior ou igual a zero e menor que 100
+//console.log(Math.random()* 100); // se tira o floor, irá gerar número fracionário
+
+//console.log(155/13);// 11.923076923076923
+//console.log(Math.floor(155/13)); // 11 (arredonda o número para o menor valor inteiro mais próximo)
+//console.log(Math.ceil(155/13)); // 12 (para arredondar o valor para o maior número inteiro mais próximo)
+//console.log(Math.round(155/13)); //12 (para arredondar o valor para o número inteiro mais próximo)
+
+//Objeto Global-------------------- 
+//var myVar = 10;
+//console.log("myVar" in window);
+//console.log(window.myVar);           // toda variável declarada no escopo global é uma propriedade do objeto window
+//console.log(typeof window);
+
+//Exercícios
+//The sum of a range
+//
+function range(a,b, passo){
+  var saida =[];
+  
+  if (isNaN(passo))
+      passo = 1;
+  
+  if(passo > 0){
+        for (var i = a; i <= b ; i += passo){
+         saida.push(i);
+    }    
+  }else{
+      for(var i = a; i >= b; i += passo){
+         saida.push(i); 
+      }
+  }    
+  return saida;
+};
+
+function sum(array_num){
+   var soma =0;
+   for(var i = 0; i<= array_num.length - 1; i++){
+      soma += array_num[i];
+   }
+   return soma;
+}
+//console.log(sum(range(1,10)));
+//console.log(range(1,10,2));
+//console.log(range3(5,2,-1));
+
+//Reversing an array
+
+function reverseArray(my_array){
+  var array_saida =[];
+    for(var i = 0; i < my_array.length; i++){
+      array_saida.unshift(my_array[i]);
+    }
+  return array_saida;
+}
+function reverseArrayInPlace(my_array){
+  var aux_array = [];
+  for(var i = 0; i< my_array.length; i++){
+    aux_array.unshift(my_array[i]);
+  }
+  for(var i = 0; i < aux_array.length; i++){
+      my_array[i] = aux_array[i];
+  }
+}
+
+/*function reverseArrayInPlace_Solucao_do_livro(array) {
+  for (var i = 0; i < Math.floor(array.length / 2); i++) {
+    var old = array[i];
+    array[i] = array[array.length - 1 - i];
+    array[array.length - 1 - i] = old;
+  }
+  return array;
+}*/
+console.log(reverseArray(['A','B','C']));
+
+var meu_array = [1,2,3,4,5];
+reverseArrayInPlace(meu_array);
+console.log(meu_array);
+
+  </script> 
+</head>
+<body>
+
+</body>
+</html>
