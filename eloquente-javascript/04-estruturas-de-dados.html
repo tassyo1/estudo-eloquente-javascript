@@ -285,16 +285,24 @@ function arrayToList(array){
 
 function listToArray(objeto){
     var aux =[];
-     for(var propriedade in objeto){
-        aux.push(objeto[propriedade]);
-        break;
-     };
 
-     console.log(aux[0]);
-    //return aux;
+  return function(){
+     for(var propriedade in objeto){
+        if(typeof propriedade != 'object')
+            aux.push(objeto[propriedade]);
+        else
+            listToArray(propriedade);
+     };
+     return aux;
+  } 
 }
 //console.log(arrayToList([10, 20]));
-console.log(listToArray(arrayToList([10, 20, 30])));
+//console.log(listToArray(arrayToList([10, 20, 30])));
+/*var o = {};
+var d = typeof o;
+var a ='oie';
+console.log(typeof d);
+console.log(typeof a);  OBS.: typeof retorna uma string*/      
   </script> 
 </head>
 <body>
